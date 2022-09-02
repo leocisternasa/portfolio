@@ -15,6 +15,11 @@ function Contact() {
       formData[field.name] = field.value
 
     })
+    fetch('/api/mail', {
+      method: 'post',
+      body: JSON.stringify(formData)
+
+    })
     console.log(formData);
   }
   return (
